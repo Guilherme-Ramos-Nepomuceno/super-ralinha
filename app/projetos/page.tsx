@@ -1,7 +1,15 @@
+'use client'
+
 import { NavegadorMobile } from "@/components/mobile-nav";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
+import React from "react";
 
 export default function Projetos(){
+    const plugin = React.useRef(
+        Autoplay({ delay: 5000, stopOnInteraction: true })
+      )
+
     return (
         <div>
         <div className=" sticky top-0 left-0 bg-zinc-100 columns-2 w-full h-20 text-zinc-50 flex items-center justify-between z-50">
@@ -37,7 +45,12 @@ export default function Projetos(){
         <div  className="size-full text-center mt-3">
             <h1  className="text-2xl font-bold text-amber-900">Álbum de fotos</h1>
             <h5 className="font-sans -mt-2 mb-8">Fotos do último campeonato Super ralinha</h5>
-            <Carousel className="w-11/12 mx-auto">
+            <Carousel
+                className="w-11/12 mx-auto" 
+                plugins={[plugin.current]}
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+              >
             <CarouselContent className="-ml-2 md:-ml-4">
                     <CarouselItem className="pl-2 md:pl-4"><img src="imagensralinha/img1.jpg" alt="" /></CarouselItem>
                     <CarouselItem className="pl-2 md:pl-4"><img src="imagensralinha/img2.jpg" alt="" /></CarouselItem>
