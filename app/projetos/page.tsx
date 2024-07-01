@@ -36,8 +36,8 @@ export default function Projetos(){
         <h5 id="ultimocamp" className="font-sans mb-8">29, 30 e 31 de agosto</h5>
         <a href="https://maps.app.goo.gl/94qoVUVWcpd7cRDS6"><h1 className="text-2xl font-bold text-green-800 flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pinned"><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.1-.1.2-.1.3 0 .6.4 1 1 1h18c.6 0 1-.4 1-1 0-.1 0-.2-.1-.3l-2-6a1 1 0 0 0-.9-.7h-3.835"/></svg>
-            local</h1></a>
-        <h5 className="font-sans">Mini Estádio do Planalto Britão</h5>
+            local</h1>
+        <h5 className="font-sans">Mini Estádio do Planalto Britão</h5></a>
         </div>
         <div>
             <a className="size-18 p-3 hover:bg-yellow-400 opacity-70 fixed rounded end-2 bottom-4 z-10 transition-colors duration-200 hover:text-green-900 bg-green-600 text-yellow-400" href="https://app.sermaissaudavel.com"><h1>vá para a inscrição</h1></a>
@@ -80,7 +80,7 @@ export default function Projetos(){
         </div>
         <div className="size-full text-center">
             <h1 className="text-2xl mt-14 font-bold text-amber-900">jornada</h1>
-            <h5 className="font-sans text-gray-900">Aperte o botão e vá para o cadastro no ser mais saudável</h5>
+            <h5 className="font-sans text-gray-900">Aperte o botão e vá para o cadastro no Ser Mais Saudável</h5>
             <div className=" w-full items-center size-full flex flex-col md:flex-row justify-between" >
                 <img className="md:w-1/5 " src="imagens/Passos-1.png" alt="" />
                 <img className="w-10 md:hidden lg:flex justify-center" src="imagens/Passos-seta.png" alt="" />
