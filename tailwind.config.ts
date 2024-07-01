@@ -33,7 +33,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage:{
-        'parallax': 'url("/imagens/backgroundi.png")'
+        'parallax': 'url("/imagens/background-hero.png")'
       },
     },
   },

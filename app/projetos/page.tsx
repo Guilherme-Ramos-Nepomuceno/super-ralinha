@@ -13,7 +13,7 @@ export default function Projetos(){
                 <a className=" bold text-amber-950 mr-1 " href="#sobremandu">sobre o Manduvi</a>
             </div>
         </div>
-        <div className="w-full h-64 bg-top bg-no-repeat bg-fixed bg-parallax bg-contain md:bg-repeat md:h-[38rem]">
+        <div className="w-full h-[40rem] bg-top bg-no-repeat bg-fixed bg-parallax bg-cover md:h-[42rem]">
         </div>
         <div className="size-full flex flex-col items-center pt-4 gap-y-2">
             <h1 className="text-2xl font-bold text-amber-900">sobre o evento</h1>
