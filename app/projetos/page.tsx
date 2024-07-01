@@ -33,18 +33,18 @@ export default function Projetos(){
         <h1  className="text-2xl font-bold text-green-800 flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar-days"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
             data</h1>
-        <h5 id="ultimocamp" className="font-sans">29, 30 e 31 de agosto</h5>
+        <h5 id="ultimocamp" className="font-sans mb-8">29, 30 e 31 de agosto</h5>
         <a href="https://maps.app.goo.gl/94qoVUVWcpd7cRDS6"><h1 className="text-2xl font-bold text-green-800 flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pinned"><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.1-.1.2-.1.3 0 .6.4 1 1 1h18c.6 0 1-.4 1-1 0-.1 0-.2-.1-.3l-2-6a1 1 0 0 0-.9-.7h-3.835"/></svg>
             local</h1></a>
         <h5 className="font-sans">Mini Estádio do Planalto Britão</h5>
         </div>
         <div>
-            <a className="size-18 p-3 bg-green-400 opacity-70 fixed rounded end-2 bottom-4 z-10 text-amber-950" href="https://app.sermaissaudavel.com"><h1>vá para a inscrição</h1></a>
+            <a className="size-18 p-3 hover:bg-yellow-400 opacity-70 fixed rounded end-2 bottom-4 z-10 transition-colors duration-200 hover:text-green-900 bg-green-600 text-yellow-400" href="https://app.sermaissaudavel.com"><h1>vá para a inscrição</h1></a>
         </div>
         <div  className="size-full text-center mt-3">
             <h1  className="text-2xl font-bold text-amber-900">Álbum de fotos</h1>
-            <h5 className="font-sans -mt-2 mb-8">Fotos do último campeonato Super ralinha</h5>
+            <h5 className="font-sans -mt-2 mb-8">Fotos do último campeonato Super Ralinha</h5>
             <Carousel
                 className="w-11/12 mx-auto" 
                 plugins={[plugin.current]}
@@ -92,6 +92,7 @@ export default function Projetos(){
             </div>
         </div>
         <div id="sobremandu" className="w-full ">
+        <h1 className="text-2xl font-bold text-amber-900 p-10 text-center">sobre o manduvi</h1>
             <img className="lg:m-auto" src="imagens/manduvi.png" alt="" />
         </div>
         <div className="size-full">
@@ -108,7 +109,7 @@ export default function Projetos(){
             </div>
             <div className="mx-auto mt-2 text-center content-between">
                 <h1 className="text-sm mt-2 mb-3 font-bold text-black">Todos os direitos reservados</h1>
-                <a className="p-1 font-bold border-solid border-2 border-amber-950 rounded" href="https://www.bing.com/maps?osid=96c8df6c-9136-4b23-9adc-f6afb8e15992&cp=-15.593174~-56.102586&lvl=17&pi=0&v=2&sV=2&form=S00027">ir ao Instituto</a>
+                <a className="p-1 font-bold border-solid border-2 border-amber-950 rounded" href="https://maps.app.goo.gl/kR9h8pZyhJSiaJgE7">ir ao Instituto</a>
                 <h1 className="text-2xl mt-2 font-bold text-amber-900">Redes sociais</h1>
                 <div className="flex justify-around">
                     <a className="p-2 flex" href="https://www.youtube.com/@institutomanduvi">
