@@ -91,8 +91,8 @@ export default function Projetos(){
                 <img className="w-10 md:hidden lg:flex justify-center" src="imagens/Passos-seta.png" alt="" />
                 <img className="md:w-1/5" src="imagens/Passos-4.png" alt="" />
             </div>
-            <div className="mx-auto my-10 w-2/5 h-2/5 lg:w-1/5 lg:h-1/5 hover:bg-yellow-400 rounded transition-colors duration-200 hover:text-green-900 bg-green-600 text-yellow-400">
-            <a className="w-2/5 h-2/5  my-auto" href="https://app.sermaissaudavel.com"><h1 className="text-2xl">vá para a inscrição</h1></a>
+            <div className="grid mx-auto my-10 w-3/5 h-20 lg:w-1/5 hover:bg-yellow-400 rounded transition-colors duration-200 hover:text-green-900 bg-green-600 text-yellow-400">
+            <a className="h-full" href="https://app.sermaissaudavel.com"><h1 className="text-2xl my-6">vá para a inscrição</h1></a>
             </div>
         </div>
         <div id="sobremandu" className="w-full ">
