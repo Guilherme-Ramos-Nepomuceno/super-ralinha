@@ -18,7 +18,7 @@ export default function Projetos() {
 
   return (
     <main className="mt-20">
-      {/*  <div className="w-full h-96 bg-fixed bg-cover bg-center bg-no-repeat bg-parallax lg:h-[30rem]" /> */}
+      <div className="w-full h-72 bg-cover bg-top bg-no-repeat bg-parallax md:h-[34rem]" />
       <div className="size-full flex flex-col items-center gap-y-3 pt-20 pb-20">
         <h1 className="text-5xl font-bold text-amber-900">sobre o evento</h1>
         <h5 className="w-3/4 font-sans">
