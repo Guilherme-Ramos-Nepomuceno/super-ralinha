@@ -3,13 +3,33 @@ import { Inter, Bebas_Neue as BebasNeue } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { NavegadorMobile } from '@/components/mobile-nav'
-const inter = Inter({ subsets: ['latin'] })
-const bebas = BebasNeue({ weight: ['400'], subsets: ['latin'] })
+import Link from 'next/link'
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
+const bebas = BebasNeue({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-display',
+})
 
 export const metadata: Metadata = {
   title: 'Ser Mais Esporte e Lazer - Festivais',
   description:
     'Festivais do Programa Ser mais esporte e lazer - instituto manduvi',
+  openGraph: {
+    title: 'Festival Ser Mais Esportes e lazer',
+    description: 'Conheça as modalidades do projeto Ser mais Esportes e Lazer',
+    url: 'https://sermaisesporteelazer.vercel.app/',
+    siteName: 'Next.js',
+    images: [
+      {
+        url: 'https://sermaisesporteelazer.vercel.app/og.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'pt-br',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
@@ -19,29 +39,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={cn('scroll-smooth', inter.className, bebas.className)}>
-        <div className="w-full fixed top-0 left-0 bg-zinc-100 z-50 h-20">
-          <div className="container columns-2 w-full text-zinc-50 flex items-center justify-between">
+      <body
+        className={cn(
+          'scroll-smooth font-sans',
+          bebas.variable,
+          inter.variable,
+        )}
+      >
+        <div className="w-full fixed top-0 left-0 z-50 h-20 bg-zinc-100/60">
+          <div className="container columns-2 w-full  flex items-center justify-between">
             <div>
-              <a href="https://manduvi.org.br">
+              <Link href="https://manduvi.org.br">
                 <img
                   src="/imagens/Manduvi-Marrom.png"
                   alt=""
                   className="w-28"
                 />
-              </a>
+              </Link>
             </div>
             <NavegadorMobile />
             <div className=" hidden h-full md:flex items-center justify-center gap-3">
-              <a className=" bold text-amber-950  " href="#ultimocamp">
+              <Link className="text-amber-950 font-display" href="#ultimocamp">
                 ultimo campeonato
-              </a>
-              <a className=" bold text-amber-950  " href="#jornada">
+              </Link>
+              <Link className="text-amber-950 font-display" href="#jornada">
                 jornada
-              </a>
-              <a className=" bold text-amber-950 " href="#sobremandu">
+              </Link>
+              <Link className="text-amber-950 font-display" href="#sobremandu">
                 sobre o Manduvi
-              </a>
+              </Link>
             </div>
           </div>
         </div>
