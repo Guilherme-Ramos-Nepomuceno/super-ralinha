@@ -24,8 +24,8 @@ export default function Projetos() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start bg-zinc-50">
-      <div className="w-full h-screen flex flex-col items-center justify-end bg-parallax bg-fixed bg-no-repeat bg-cover bg-center">
-        <div className="h-1/6 bg-zinc-50 w-full items-center flex">
+      <div className="w-full h-screen flex flex-col items-center justify-end bg-parallax bg-fixed bg-no-repeat bg-mob md:bg-cover md:bg-center bg-top">
+        <div className="h-2/12 bg-zinc-50 w-full items-center flex">
           <div className="w-full flex flex-wrap items-center justify-around gap-5">
             <img className="w-32" src="imagens/patrocinio1.webp" alt="" />
             <img className="w-32" src="imagens/patrocinio2.webp" alt="" />
@@ -35,7 +35,7 @@ export default function Projetos() {
             <img className="w-32" src="imagens/patrocinio6.webp" alt="" />
           </div>
         </div>
-        <div className="h-1/6 bg-zinc-50 w-full items-center flex">
+        <div className="h-1/6 bg-zinc-50 w-full items-center flex flex-col">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -51,6 +51,9 @@ export default function Projetos() {
             <path d="M15 5H9" />
             <path d="M15 9v3h4l-7 7-7-7h4V9z" />
           </svg>
+          <h5 className="text-sm text-center text-gray-500/80">
+            acompanhe as informações abaixo
+          </h5>
         </div>
       </div>
       <div className="size-full  bg-zinc-50 flex flex-col items-center gap-y-3 pt-16 pb-20">
@@ -110,6 +113,10 @@ export default function Projetos() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+          <h5 className="text-sm text-start ml-3 mt-1 md:ml-10 text-gray-500/80">
+            clique em uma modalidade acima para obter a data, local e link para
+            o cadastro abaixo.
+          </h5>
         </div>
       </div>
       <div className="w-full h-2/4 bg-zinc-50 ">
@@ -163,6 +170,9 @@ export default function Projetos() {
               </svg>
               local
             </h1>
+            <h5 className="text-xs text-center -mt-2 text-gray-900">
+              clique aqui para ver o local no mapa
+            </h5>
             <h5 className="font-sans">
               {modalidade === ''
                 ? 'Clique na modalidade'
@@ -296,7 +306,7 @@ export default function Projetos() {
                 hidden: open,
                 flex: !open,
               })}
-              src="imagens/passos-1.png"
+              src="imagens/Passos-1.png"
               alt=""
             />
             <div className="w-full h-20 rounded  bg-zinc-800/90 ">

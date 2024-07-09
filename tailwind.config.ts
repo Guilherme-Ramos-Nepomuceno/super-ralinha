@@ -39,6 +39,9 @@ const config = {
       backgroundImage: {
         parallax: 'url("/imagens/background-hero.png")',
       },
+      backgroundSize: {
+        mob: '300%',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
