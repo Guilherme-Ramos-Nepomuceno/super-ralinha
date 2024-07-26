@@ -7,206 +7,79 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import { db } from '@/lib/data'
-import { cn } from '@/lib/utils'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import React from 'react'
-
 export default function Projetos() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true }),
   )
 
-  const [open, setOpen] = React.useState(false)
-
-  const [modalidade, setModalidade] = React.useState('')
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start bg-zinc-50">
-      <div className="w-full h-screen flex flex-col items-center justify-end bg-parallax bg-fixed bg-no-repeat bg-mob md:bg-cover md:bg-center bg-top">
-        <div className="h-2/12 bg-zinc-50 w-full items-center flex">
-          <div className="w-full flex flex-wrap items-center justify-around gap-5">
-            <img className="w-32" src="imagens/patrocinio1.webp" alt="" />
-            <img className="w-32" src="imagens/patrocinio2.webp" alt="" />
-            <img className="w-32" src="imagens/patrocinio3.webp" alt="" />
-            <img className="w-32" src="imagens/patrocinio4.webp" alt="" />
-            <img className="w-32" src="imagens/patrocinio5.webp" alt="" />
-            <img className="w-32" src="imagens/patrocinio6.webp" alt="" />
+    <main className="flex min-h-screen flex-col items-center justify-start ">
+      <div className="w-full h-screen flex justify-center animate-colortransition timeup50">
+        <div className="w-2/4 h-2 bg-zinc-50 mr-auto flex animate-linhat timeup50"></div>
+        {/* center logo */}
+        <div className="relative flex overflow-y-hidden w-auto h-2/4  my-auto ">
+          <div className="w-40  fixed flex items-center timeup50 animate-fadeout">
+            <img className="" src="imagens/1x/emblema.png" alt="" />
+          </div>
+          <div className="w-24 fixed flex transition progress animate-rotate z-10">
+            <img className="mb-4" src="imagens/1x/bola.png" alt="bola" />
+          </div>
+          <div className="w-44 mt-5 fixed z-30 flex timeup50 animate-fadeout">
+            <img className="" src="imagens/1x/super.png" alt="" />
           </div>
         </div>
-        <div className="h-1/6 bg-zinc-50 w-full items-center flex flex-col">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-arrow-big-down-dash animate-bounce w-2/4 h-2/4 mx-auto"
-          >
-            <path d="M15 5H9" />
-            <path d="M15 9v3h4l-7 7-7-7h4V9z" />
-          </svg>
-          <h5 className="text-sm text-center text-gray-500/80">
-            acompanhe as informações abaixo
-          </h5>
+        <div className="w-2/4 h-2 bg-zinc-50 ml-auto flex animate-linhat timeup50"></div>
+        <div className="w-40 fixed flexend bottom-4 mx-auto">
+          <img className="" src="imagens/campinho.png" alt="" />
+          <div className="w-2 fixed h-2 bg-green-800 bottom-10 flex rounded-3xl progress animate-bola"></div>
         </div>
       </div>
-      <div className="size-full  bg-zinc-50 flex flex-col items-center gap-y-3 pt-16 pb-20">
-        <h1 className="text-5xl font-bold text-amber-900">sobre o evento</h1>
-        <h5 className="w-3/4 font-sans">
-          O Festival <span className="font-bold">Ser + Esporte e Lazer</span>,
-          conduzido pelo Instituto Manduvi, promove a inclusão social e o
-          desenvolvimento humano em Cuiabá e Várzea Grande, Mato Grosso, por
-          meio de diversas atividades esportivas e de lazer. Entre as
-          modalidades oferecidas estão:
-        </h5>
-        <div className=" bg-zinc-50 size-full text-center pt-3 pb-12">
-          <Carousel
-            className="w-11/12 mx-auto"
-            opts={{
-              loop: true,
-            }}
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              <CarouselItem
-                className="pl-2 md:pl-4 hover:cursor-pointer"
-                onClick={() => setModalidade('basquete')}
-              >
-                <img src="imagensesporte/basquete.png" alt="" />
-              </CarouselItem>
-              <CarouselItem
-                className="pl-2 md:pl-4 hover:cursor-pointer"
-                onClick={() => setModalidade('beach-wrestling')}
-              >
-                <img src="imagensesporte/beachwrestling.png" alt="" />
-              </CarouselItem>
-              <CarouselItem
-                className="pl-2 md:pl-4 hover:cursor-pointer"
-                onClick={() => setModalidade('futevolei')}
-              >
-                <img src="imagensesporte/futevolei.png" alt="" />
-              </CarouselItem>
-              <CarouselItem
-                className="pl-2 md:pl-4 hover:cursor-pointer"
-                onClick={() => setModalidade('jiu-jitsu')}
-              >
-                <img src="imagensesporte/jiujitsu.png" alt="" />
-              </CarouselItem>
-              <CarouselItem
-                className="pl-2 md:pl-4 hover:cursor-pointer"
-                onClick={() => setModalidade('voleidepraia')}
-              >
-                <img src="imagensesporte/voleidepraia.png" alt="" />
-              </CarouselItem>
-              <CarouselItem
-                className="pl-2 md:pl-4 hover:cursor-pointer"
-                onClick={() => setModalidade('wrestling')}
-              >
-                <img src="imagensesporte/wrestling.png" alt="" />
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-          <h5 className="text-sm text-start ml-3 mt-1 md:ml-10 text-gray-500/80">
-            clique em uma modalidade acima para obter a data, local e link para
-            o cadastro abaixo.
-          </h5>
-        </div>
-      </div>
-      <div className="w-full h-2/4 bg-zinc-50 ">
-        <div className="w-3/4 h-2/4  bg-zinc-50 lg:size-1/4 m-auto pb-10 mb-16 md:-mb-16 flex flex-col items-center p-4 shadow-lg">
-          <h1 className="text-2xl font-bold text-green-800 flex">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-calendar-days"
-            >
-              <path d="M8 2v4" />
-              <path d="M16 2v4" />
-              <rect width="18" height="18" x="3" y="4" rx="2" />
-              <path d="M3 10h18" />
-              <path d="M8 14h.01" />
-              <path d="M12 14h.01" />
-              <path d="M16 14h.01" />
-              <path d="M8 18h.01" />
-              <path d="M12 18h.01" />
-              <path d="M16 18h.01" />
-            </svg>
-            data
-          </h1>
-          <h5 className="font-sans mb-8">
-            {modalidade === '' ? 'Clique na modalidade' : db[modalidade].data}
-          </h5>
-          <a href={modalidade === '' ? '' : db[modalidade].linklocal}>
-            <h1 className="text-2xl font-bold text-green-800 flex justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-map-pinned"
-              >
-                <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0" />
-                <circle cx="12" cy="8" r="2" />
-                <path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.1-.1.2-.1.3 0 .6.4 1 1 1h18c.6 0 1-.4 1-1 0-.1 0-.2-.1-.3l-2-6a1 1 0 0 0-.9-.7h-3.835" />
-              </svg>
-              local
-            </h1>
-            <h5 className="text-xs text-center -mt-2 text-gray-900">
-              clique aqui para ver o local no mapa
-            </h5>
-            <h5 className="font-sans">
-              {modalidade === ''
-                ? 'Clique na modalidade'
-                : db[modalidade].local}
-            </h5>
-          </a>
-          <div className="flex items-center mt-10 justify-center h-14 w-44 hover:bg-yellow-400 rounded transition-colors duration-200 hover:text-green-900 bg-green-900 text-gray-100">
-            <a
-              className="h-full flex items-center justify-center"
-              href={modalidade === '' ? '' : db[modalidade].linkp}
-            >
-              <h1 className="text-sm">vá para o cadastro do esporte</h1>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="z-20">
-        <a
-          className="size-18 p-3 hover:bg-yellow-400 opacity-70 fixed rounded end-2 bottom-4 z-20 transition-colors duration-200 hover:text-green-900 bg-green-600 text-yellow-400"
-          href="https://app.sermaissaudavel.com"
+      <div className="fixed bottom-4 right-2 w-32 animate-pulse">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#103602"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="lucide lucide-chevrons-up w-10 h-10 mx-auto"
         >
-          <h1>vá para a inscrição</h1>
-        </a>
+          <path d="m17 11-5-5-5 5" />
+          <path d="m17 18-5-5-5 5" />
+        </svg>
+        <h1 className="text-xs text-green-500 text-center">
+          arraste para cima e acompanhe a bola em campo
+        </h1>
       </div>
+      {/* container1 */}
+      <div className="w-full h-screen bg-green-100 flex flex-col items-center justify-start gap-y-3 timeout30 animate-colortransition">
+        <h1 className="text-5xl h-auto font-bold text-green-800 timeup50 sm:timeup0 animate-fadein mt-40 ">
+          sobre o evento
+        </h1>
+        <h1 className="w-4/5 h-full font-display text-gray-700/80 text-center timeupmandu animate-fadein">
+          Promovido pelo Instituto Manduvi,
+          <span className="text-green-950"> o Super Ralinha 2024</span>, é a
+          maior competição de futebol amador de Mato Grosso, reunindo mais de
+          150 equipes.
+        </h1>
+      </div>
+      {/* container2 */}
       <div
-        className=" bg-zinc-50 w-full flex flex-col items-center justify-center text-center pt-20 md:mt-40 pb-12"
+        className=" bg-green-100 w-full h-screen flex flex-col text-center"
         id="ultimocamp"
       >
-        <h1 className="text-5xl font-bold text-amber-900">último evento</h1>
-        <h5 className="font-sans -mt-2 mb-8">
-          Fotos do último campeonato Jogos das Estrelas
+        <h1 className="text-5xl font-bold text-green-800 timeup50 animate-fadein">
+          último evento
+        </h1>
+        <h5 className="font-display timeup20 animate-fadein mb-5">
+          conteúdos do último campeonato
         </h5>
         <Carousel
-          className="w-11/12 mx-auto"
+          className="w-11/12 z-20 mx-auto timeup30 animate-fadein"
           plugins={[plugin.current]}
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
@@ -269,10 +142,10 @@ export default function Projetos() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <div className="w-full mt-5 bg-zinc-50 flex items-center justify-center">
+        <div className="w-full h-52 bg-green-100 flex items-center justify-center">
           <iframe
-            className="w-2/4 h-96"
-            src="https://www.youtube.com/embed/KDFBsEwBgmk"
+            className="w-2/3 sm:mt-0 sm:w-1/4 h-48 sm:h-auto timeup0 animate-fadein"
+            src="https://www.youtube.com/embed/FDivBqurVp4?si=8OUePXlVNk48liTJ"
             title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -280,124 +153,128 @@ export default function Projetos() {
           ></iframe>
         </div>
       </div>
-      <div
-        id="jornada"
-        className="w-full justify-center items-center flex-col pt-20 bg-zinc-50 text-center"
-      >
-        <h1 className="text-5xl font-bold text-amber-900">jornada</h1>
-        <h5 className="font-sans text-gray-900">
-          Aperte o botão e vá para o cadastro no{' '}
-          <span className="font-sans font-bold text-gray-900">
-            Aplicativo Ser Mais Saudável
-          </span>{' '}
-        </h5>
-        <div
-          className={cn('w-3/4 mx-auto md:w-2/5', {
-            'h-96': !open,
-            'h-20': open,
-          })}
-        >
-          <div
-            className="size-full hover:cursor-pointer"
-            onClick={() => setOpen(!open)}
-          >
-            <img
-              className={cn('w-2/4 h-80 md:h-full m-auto', {
-                hidden: open,
-                flex: !open,
-              })}
-              src="imagens/Passos-1.png"
-              alt=""
-            />
-            <div className="w-full h-20 rounded  bg-zinc-800/90 ">
-              <h1 className="w-full pt-5 h-6 text-center text-2xl md:text-3xl text-white">
-                {open ? 'Fechar' : 'veja a jornada completa'}
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div
-          className={cn(
-            'w-full justify-center items-center flex flex-col md:flex-row mt-5',
-            {
-              hidden: !open,
-              flex: open,
-            },
-          )}
-        >
-          <img
-            className="md:w-1/5 lg:w-2/12"
-            src="imagens/Passos-1.png"
-            alt=""
-          />
-          <img
-            className="w-8 md:hidden lg:flex justify-center"
-            src="imagens/Passos-seta.png"
-            alt=""
-          />
-          <img
-            className="md:w-1/5 lg:w-2/12"
-            src="imagens/Passos-2.png"
-            alt=""
-          />
-          <img
-            className="w-8 md:hidden lg:flex justify-center"
-            src="imagens/Passos-seta.png"
-            alt=""
-          />
-          <img
-            className="md:w-1/5 lg:w-2/12"
-            src="imagens/Passos-3.png"
-            alt=""
-          />
-          <img
-            className="w-8 md:hidden lg:flex justify-center"
-            src="imagens/Passos-seta.png"
-            alt=""
-          />
-          <img
-            className="md:w-1/5 lg:w-2/12"
-            src="imagens/Passos-4.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <div className="flex items-center mt-10 md:mt-32 justify-center h-20 w-44 hover:bg-yellow-400 rounded transition-colors duration-200 hover:text-green-900 bg-green-600 text-yellow-400">
-        <a
-          className="h-full flex items-center justify-center"
-          href="https://app.sermaissaudavel.com"
-        >
-          <h1 className="text-2xl">vá para o cadastro</h1>
-        </a>
-      </div>
-      <div id="sobremandu" className="w-full bg-zinc-50 pt-10">
-        <h1 className="text-5xl font-bold text-amber-900 p-10 bg-zinc-50 text-center">
+      <div id="sobremandu" className="w-full h-screen bg-green-100 ">
+        <h1 className="text-5xl font-bold text-green-800 sm:mt-5 bg-green-100 text-center timeup50 animate-fadein">
           sobre o manduvi
         </h1>
-        <img className="lg:m-auto" src="imagens/manduvi.png" alt="" />
+        <img
+          className="sm:h-4/5 mx-auto relative z-20 timeupmandu animate-fadein"
+          src="imagens/manduvi.png"
+          alt=""
+        />
       </div>
-      <div className="w-full">
-        <h1 className="text-5xl font-bold text-amber-900 mt-14 mb-10 bg-zinc-50 text-center">
+      <div className="w-full h-screen bg-green-100">
+        <div className="w-2/4 h-[28%] relative z-30  sm:w-1/4 flex items-center mx-auto timeup80 animate-fadein">
+          <img src="imagens/premios.webp" alt="" />
+        </div>
+        <div className="w-3/4 relative z-20 h1/4 sm:w-1/4 flex mx-auto timeup60 animate-fadein -mt-20 sm:-mt-0">
+          <img src="imagens/gol.png" alt="" />
+        </div>
+        <div>
+          <h1 className="text-center mt-72 text-green-800 sm:mt-10 text-4xl timeup0 animate-fadein">
+            premiações
+          </h1>
+          <h1 className="text-center w-3/4  text-zinc-600 text-lg mx-auto timeup0 animate-fadein">
+            Com a maior premiação do estado, totalizando R$ 700 mil, os duelos
+            serão intensos, com prêmios incríveis, incluindo um automóvel e
+            motocicletas. <br></br> Não perca a oportunidade de participar desse
+            evento espetacular e mostrar o seu talento!
+          </h1>
+        </div>
+        <div className="w-2/4 sm:w-1/4 h-16  mx-auto my-10 flex timeout15 animate-fadein">
+          <a
+            className="size-full bg-green-800 rounded-xl hover:bg-green-200"
+            href=""
+          >
+            <span className="text-green-100 text-xl w-full flex h-16 my-auto text-center items-center hover:text-green-900">
+              vá para a inscrição
+            </span>
+          </a>
+        </div>
+      </div>
+      <div className="w-full h-60 flex flex-col mx-auto items-center bg-green-100 ">
+        <h1 className="text-center text-green-800 mt-10 sm:mt-10 mb-10 text-4xl timeup0 animate-fadein">
           patrocinadores
         </h1>
-        <div className="w-full flex flex-wrap items-center justify-around gap-5 mb-14 shadow-2xl">
-          <img className="w-32" src="imagens/patrocinio1.webp" alt="" />
-          <img className="w-32" src="imagens/patrocinio2.webp" alt="" />
-          <img className="w-32" src="imagens/patrocinio3.webp" alt="" />
-          <img className="w-32" src="imagens/patrocinio4.webp" alt="" />
-          <img className="w-32" src="imagens/patrocinio5.webp" alt="" />
-          <img className="w-32" src="imagens/patrocinio6.webp" alt="" />
+        <div className="w-4/5 h-40 mx-auto flex flex-wrap p-2 rounded-md  bg-zinc-50 timeupbg animate-colorbg">
+          <img
+            className="w-2/5 sm:w-1/5 m-auto timeup1 animate-patrocinio "
+            src="imagens/patrocinio1.webp"
+            alt=""
+          />
+          <img
+            className="w-2/5 sm:w-1/5 m-auto timeup2 animate-patrocinio "
+            src="imagens/patrocinio4.webp"
+            alt=""
+          />
+          <img
+            className="w-2/5 sm:w-1/5 m-auto timeup3 animate-patrocinio "
+            src="imagens/patrocinio2.webp"
+            alt=""
+          />
+          <img
+            className="w-2/5 sm:w-1/5 m-auto timeup4 animate-patrocinio "
+            src="imagens/patrocinio3.webp"
+            alt=""
+          />
         </div>
-        <div className="w-3/6 mx-auto md:w-1/5 ">
-          <img src="imagens/Logolaranja.png" alt="" />
+
+        {/* <img className="w-1/6" src="imagens/patrocinio5.webp" alt="" /> */}
+        {/* <img className="w-1/6" src="imagens/patrocinio6.webp" alt="" /> */}
+      </div>
+      <div className="w-full h-screen flexb flex-col justify-center bg-green-100">
+        <div className="flex-col w-full h-8">
+          <h1 className="text-center text-green-800 mb-8 sm:mb-0 mt-36 sm:mt-20 sm:my-10 text-4xl timeup80 animate-fadein">
+            camisa 12 e seleção digital
+          </h1>
+          <img
+            className="w-2/4 h-80 sm:h-auto mx-auto sm:w-1/6 timeupmandu animate-fadein"
+            src="imagens/camisa12.png"
+            alt=""
+          />
+        </div>
+        <h1 className="w-3/4 flex mb-52 sm:mt-[26rem] text-center text-4xl mx-auto timeup0 animate-fadein">
+          ajude o Super Ralinha a chegar ainda mais longe!
+        </h1>
+      </div>
+      <div className="w-full h-screen bg-green-100 flex justify-around flex-col">
+        <img
+          className="w-2/4 sm:w-1/5 sm:mt-1 mx-auto -mt-10 timeupmandu animate-fadein"
+          src="imagens/times.png"
+          alt=""
+        />
+        <div className="w-full h-2/4">
+          <h5 className="w-3/4 text-center text-xl flex my-10 sm:my-0 sm:mt-16 mx-auto timeup0 animate-fadein text-zinc-700">
+            Acesse, escolha seu time e cadastre suas redes sociais para ajudar a
+            multiplicar os conteúdos e a torcida pelo Super Ralinha 2023.
+          </h5>
+          <div className="w-2/4 h-16 sm:w-1/4 mx-auto flex flex-col timeout15 animate-fadein">
+            <a
+              className="size-full bg-green-800 rounded-xl hover:bg-green-200"
+              href=""
+            >
+              <h1 className="text-green-100 text-xl w-full flex h-16 my-auto text-center items-center hover:text-green-900">
+                Participe com seu time
+              </h1>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="w-full bg-green-900 h-auto relative z-20">
+        <div className="w-3/5 mx-auto my-4 md:w-1/5 ">
+          <img
+            className="w-10/12 mx-auto"
+            src="imagens/Logofooter.png"
+            alt=""
+          />
         </div>
         <div className="mx-auto mt-2 text-center  content-between">
-          <h1 className="text-2xl mt-2 font-bold text-amber-900">
+          <h1 className="text-2xl mt-2 font-bold text-green-100">
             Redes sociais
           </h1>
           <div className="flex justify-around">
             <a
-              className="p-2 flex font-display"
+              className="p-2 flex font-display text-green-100"
               href="https://www.youtube.com/@institutomanduvi"
             >
               <svg
@@ -418,7 +295,7 @@ export default function Projetos() {
               youtube
             </a>
             <a
-              className="p-2 flex font-display"
+              className="p-2 flex font-display text-green-100"
               href="https://www.instagram.com/institutomanduvi/"
             >
               <svg
@@ -439,7 +316,10 @@ export default function Projetos() {
               </svg>
               instagram
             </a>
-            <a className="p-2 flex font-display" href="https://x.com/imanduvi">
+            <a
+              className="p-2 flex font-display text-green-100"
+              href="https://x.com/imanduvi"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -457,7 +337,7 @@ export default function Projetos() {
               X/twitter
             </a>
             <a
-              className="p-2 flex font-display"
+              className="p-2 flex font-display text-green-100"
               href="https://www.facebook.com/institutomanduvi/ "
             >
               <svg
@@ -478,12 +358,12 @@ export default function Projetos() {
             </a>
           </div>
           <a
-            className="p-1 font-bold border-solid border-2 border-amber-950 rounded font-display"
+            className="p-1 font-bold border-solid border-2 border-green-100 text-green-100 rounded font-display"
             href="https://maps.app.goo.gl/kR9h8pZyhJSiaJgE7"
           >
             ir ao Instituto
           </a>
-          <h1 className="text-sm mt-2 mb-3 font-bold text-gray-500">
+          <h1 className="text-sm mt-1 font-bold text-gray-200/80">
             © Todos os direitos reservados
           </h1>
         </div>

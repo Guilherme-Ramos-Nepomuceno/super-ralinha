@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Inter, Bebas_Neue as BebasNeue } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
-import { NavegadorMobile } from '@/components/mobile-nav'
 import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const bebas = BebasNeue({
@@ -46,8 +45,8 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <div className="w-full fixed top-0 left-0 z-50 h-20 bg-zinc-100/60">
-          <div className="container columns-2 w-full  flex items-center justify-between">
+        <div className="w-full fixed top-0 left-0 z-50 h-20">
+          <div className="container w-full flex items-center justify-center">
             <div>
               <Link href="https://manduvi.org.br">
                 <img
@@ -55,18 +54,6 @@ export default function RootLayout({
                   alt=""
                   className="w-28"
                 />
-              </Link>
-            </div>
-            <NavegadorMobile />
-            <div className=" hidden h-full md:flex items-center justify-center gap-3">
-              <Link className="text-amber-950 font-display" href="#ultimocamp">
-                ultimo campeonato
-              </Link>
-              <Link className="text-amber-950 font-display" href="#jornada">
-                jornada
-              </Link>
-              <Link className="text-amber-950 font-display" href="#sobremandu">
-                sobre o Manduvi
               </Link>
             </div>
           </div>

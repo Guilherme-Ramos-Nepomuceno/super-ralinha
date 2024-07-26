@@ -22,5 +22,90 @@
   .container {
     @apply px-4;
   }
+
 }
+.progress{
+  animation-timeline: scroll(root);
+}
+.timeup50{
+  animation-timeline: view(block);
+  animation-range: cover 50% cover 85%;
+}
+.timeout30{
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 35%;
+}
+.timeout15{
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 15%;
+}
+.timeup90{
+  animation-timeline: view(block);
+  animation-range: cover 50% cover 90%;
+}
+.timeup80{
+  animation-timeline: view(block);
+  animation-range: cover 70% cover 75%;
+}
+.timeup60{
+  animation-timeline: view(block);
+  animation-range: cover 50% cover 60%;
+}
+.timeup30{
+  animation-timeline: view(block);
+  animation-range: cover 30% cover 65%;
+}
+.timeupmandu{
+  animation-timeline: view(block);
+  animation-range: cover 30% cover 50%;
+}
+.timeup0{
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 30%;
+}
+.timeup20{
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 50%;
+}
+.timeup1{
+  animation-timeline: view(block);
+  animation-range: cover 3% cover 5%;
+}.timeup2{
+  animation-timeline: view(block);
+  animation-range: cover 6% cover 8%;
+}.timeup3{
+  animation-timeline: view(block);
+  animation-range: cover 9% cover 11%;
+}.timeup4{
+  animation-timeline: view(block);
+  animation-range: cover 12% cover 14%;
+}
+.timeupbg{
+  animation-timeline: view(block);
+  animation-range: cover 15% cover 17%;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexend{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.flexb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexa{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dflex{
+  display: flex;
+}
+
   
