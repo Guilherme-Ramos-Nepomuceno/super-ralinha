@@ -10,6 +10,8 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import React from 'react'
+import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js'
+
 export default function Projetos() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true }),
@@ -90,53 +92,50 @@ export default function Projetos() {
           <CarouselContent className="-ml-2 md:-ml-4">
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                src="/imagensralinha/img1.jpg"
+                src="/imagensralinha/img1.webp"
                 alt=""
                 width={500}
                 height={500}
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img2.jpg" alt="" />
+              <img src="imagensralinha/img2.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img3.jpg" alt="" />
+              <img src="imagensralinha/img3.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img4.jpg" alt="" />
+              <img src="imagensralinha/img4.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img5.jpg" alt="" />
+              <img src="imagensralinha/img5.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img6.jpg" alt="" />
+              <img src="imagensralinha/img6.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img7.jpg" alt="" />
+              <img src="imagensralinha/img7.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img8.jpg" alt="" />
+              <img src="imagensralinha/img8.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img9.jpg" alt="" />
+              <img src="imagensralinha/img9.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img10.jpg" alt="" />
+              <img src="imagensralinha/img10.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img11.jpg" alt="" />
+              <img src="imagensralinha/img11.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img12.jpg" alt="" />
+              <img src="imagensralinha/img12.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img13.jpg" alt="" />
+              <img src="imagensralinha/img13.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img14.jpg" alt="" />
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img15.jpg" alt="" />
+              <img src="imagensralinha/img14.webp" alt="" />
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
