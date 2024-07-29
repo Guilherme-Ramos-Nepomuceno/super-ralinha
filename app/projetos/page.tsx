@@ -10,7 +10,6 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import React from 'react'
-import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js'
 
 export default function Projetos() {
   const plugin = React.useRef(
