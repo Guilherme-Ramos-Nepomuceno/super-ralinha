@@ -9,34 +9,72 @@ import {
 } from '@/components/ui/carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Projetos() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true }),
   )
-
+  useEffect(() => {
+    AOS.init({
+      offset: 500,
+    })
+  })
   return (
     <main className="flex min-h-screen flex-col items-center justify-start ">
-      <div className="w-full h-screen flex justify-center animate-colortransition timeup50">
-        <div className="w-2/4 h-2 bg-zinc-50 mr-auto flex animate-linhat timeup50"></div>
-        {/* center logo */}
-        <div className="relative flex overflow-y-hidden w-auto h-2/4  my-auto ">
-          <div className="w-40  fixed flex items-center timeup50 animate-fadeout">
-            <img className="" src="imagens/1x/emblema.png" alt="" />
-          </div>
-          <div className="w-24 fixed flex transition progress animate-rotate z-10">
-            <img className="mb-4" src="imagens/1x/bola.png" alt="bola" />
-          </div>
-          <div className="w-44 mt-5 fixed z-30 flex timeup50 animate-fadeout">
-            <img className="" src="imagens/1x/super.png" alt="" />
-          </div>
+      {/* center logo */}
+      <div className="relative flexa flex-col w-full h-screen bg-green-100">
+        <div className="w-full md:h-4/5 h-2/6 -mt-10 flexend z-0 bgprincipal"></div>
+        <div
+          data-aos-offset="700"
+          data-aos="out"
+          className="w-40  fixed flex items-center z-10"
+        >
+          <img className="" src="imagens/1x/emblema.png" alt="" />
         </div>
-        <div className="w-2/4 h-2 bg-zinc-50 ml-auto flex animate-linhat timeup50"></div>
-        <div className="w-40 fixed flexend bottom-4 mx-auto">
-          <img className="" src="imagens/campinho.png" alt="" />
-          <div className="w-2 fixed h-2 bg-green-800 bottom-10 flex rounded-3xl progress animate-bola"></div>
+        <div
+          data-aos-duration="40000"
+          data-aos-offset="700"
+          data-aos="rotate"
+          className="w-24 fixed flex z-10"
+        >
+          <img className="mb-4" src="imagens/1x/bola.png" alt="bola" />
         </div>
+        <div
+          data-aos-offset="700"
+          data-aos="out"
+          className="w-44 mt-5 fixed z-30 flex"
+        >
+          <img className="" src="imagens/1x/super.png" alt="" />
+        </div>
+        <div className="w-full h-auto bg-green-100 flex flex-col gap-y-3">
+          <h1
+            data-aos="fade-in"
+            className="text-5xl h-auto font-bold text-green-800"
+          >
+            sobre o evento
+          </h1>
+          <h1
+            data-aos="fade-in"
+            className="w-4/5 h-14 font-display text-gray-700/80 text-center"
+          >
+            Promovido pelo Instituto Manduvi,
+            <span className="text-green-950"> o Super Ralinha 2024</span>, é a
+            maior competição de futebol amador de Mato Grosso, reunindo mais de
+            150 equipes.
+          </h1>
+        </div>
+      </div>
+      <div className="w-40 fixed flexend bottom-4 mx-auto">
+        <img className="" src="imagens/campinho.png" alt="" />
+        <div
+          data-aos-duration="40000"
+          data-aos-offset="200"
+          data-aos="bola"
+          className="w-2 fixed h-2 bg-green-800 bottom-10 flex rounded-3xl"
+        ></div>
       </div>
       <div className="fixed bottom-4 right-2 w-32 animate-pulse">
         <svg
@@ -57,38 +95,25 @@ export default function Projetos() {
         </h1>
       </div>
       {/* container1 */}
-      <div className="w-full h-screen bg-green-100 flex flex-col items-center justify-start gap-y-3 timeout30 animate-colortransition">
-        <h1 className="text-5xl h-auto font-bold text-green-800 timeup50 sm:timeup0 animate-fadein mt-40 ">
-          sobre o evento
-        </h1>
-        <h1 className="w-4/5 h-full font-display text-gray-700/80 text-center timeupmandu animate-fadein">
-          Promovido pelo Instituto Manduvi,
-          <span className="text-green-950"> o Super Ralinha 2024</span>, é a
-          maior competição de futebol amador de Mato Grosso, reunindo mais de
-          150 equipes.
-        </h1>
-      </div>
       {/* container2 */}
       <div
         className=" bg-green-100 w-full h-screen flex flex-col text-center"
         id="ultimocamp"
       >
-        <h1 className="text-5xl font-bold text-green-800 timeup50 animate-fadein">
+        <h1 data-aos="fade-in" className="text-5xl font-bold text-green-800">
           último evento
         </h1>
-        <h5 className="font-display timeup20 animate-fadein mb-5">
+        <h5 data-aos="fade-in" className="font-display mb-5">
           conteúdos do último campeonato
         </h5>
         <Carousel
-          className="w-11/12 z-20 mx-auto timeup30 animate-fadein"
+          className="w-11/12 dflex z-20 mx-auto"
+          data-aos="fade-leftm"
           plugins={[plugin.current]}
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
-          opts={{
-            loop: true,
-          }}
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="dflex -ml-2 md:-ml-4">
             <CarouselItem className="pl-2 md:pl-4">
               <Image
                 src="/imagensralinha/img1.webp"
@@ -122,27 +147,19 @@ export default function Projetos() {
               <img src="imagensralinha/img9.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img10.webp" alt="" />
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img11.webp" alt="" />
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4">
               <img src="imagensralinha/img12.webp" alt="" />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <img src="imagensralinha/img13.webp" alt="" />
             </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img14.webp" alt="" />
-            </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="left-0" />
+          <CarouselNext className="right-0" />
         </Carousel>
-        <div className="w-full h-52 bg-green-100 flex items-center justify-center">
+        <div className="w-full h-52 sm:h-[50vh] overflow-hidden bg-green-100 flex items-center justify-center">
           <iframe
-            className="w-2/3 sm:mt-0 sm:w-1/4 h-48 sm:h-auto timeup0 animate-fadein"
+            data-aos="fade-leftm"
+            className="w-2/3 sm:mt-0 sm:w-2/4 h-48 md:mt-2 sm:h-[50vh]"
             src="https://www.youtube.com/embed/FDivBqurVp4?si=8OUePXlVNk48liTJ"
             title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -151,35 +168,58 @@ export default function Projetos() {
           ></iframe>
         </div>
       </div>
-      <div id="sobremandu" className="w-full h-screen bg-green-100 ">
-        <h1 className="text-5xl font-bold text-green-800 sm:mt-5 bg-green-100 text-center timeup50 animate-fadein">
+      <div id="sobremandu" className="w-full h-2/4 bg-green-100 ">
+        <h1
+          data-aos="fade-in"
+          className="text-5xl font-bold text-green-800 sm:mt-5 bg-green-100 text-center"
+        >
           sobre o manduvi
         </h1>
         <img
-          className="sm:h-4/5 mx-auto relative z-20 timeupmandu animate-fadein"
+          data-aos="fade-in"
+          className="sm:h-4/5 mx-auto relative z-20"
           src="imagens/manduvi.png"
           alt=""
         />
       </div>
-      <div className="w-full h-screen bg-green-100">
-        <div className="w-2/4 h-[28%] relative z-30  sm:w-1/4 flex items-center mx-auto timeup80 animate-fadein">
+      <div className="w-full h-screen flex flex-col bg-green-100">
+        <div
+          data-aos-offset="800"
+          data-aos="fade-in"
+          className="w-2/4 h-[28%] relative z-30  sm:w-1/4 flex items-center mx-auto"
+        >
           <img src="imagens/premios.webp" alt="" />
         </div>
-        <div className="w-3/4 relative z-20 h1/4 sm:w-1/4 flex mx-auto timeup60 animate-fadein -mt-20 sm:-mt-0">
+        <div
+          data-aos="fade-in"
+          className="w-3/4 relative z-20 h1/4 sm:w-1/4 flex mx-auto -mt-20 sm:-mt-0"
+        >
           <img src="imagens/gol.png" alt="" />
         </div>
         <div>
-          <h1 className="text-center mt-72 text-green-800 sm:mt-10 text-4xl timeup0 animate-fadein">
+          <h1
+            data-aos-offset="300"
+            data-aos="fade-in"
+            className="text-center mt-72 text-green-800 sm:mt-10 text-4xl"
+          >
             premiações
           </h1>
-          <h1 className="text-center w-3/4  text-zinc-600 text-lg mx-auto timeup0 animate-fadein">
+          <h1
+            data-aos-offset="300"
+            data-aos="fade-in"
+            className="text-center w-3/4  text-zinc-600 text-lg mx-auto"
+          >
             Com a maior premiação do estado, totalizando R$ 700 mil, os duelos
             serão intensos, com prêmios incríveis, incluindo um automóvel e
             motocicletas. <br></br> Não perca a oportunidade de participar desse
             evento espetacular e mostrar o seu talento!
           </h1>
         </div>
-        <div className="w-2/4 sm:w-1/4 h-16  mx-auto my-10 flex timeout15 animate-fadein">
+        <div
+          data-aos-offset="130"
+          data-aos="fade-in"
+          className="w-2/4 sm:w-1/4 h-16  mx-auto my-10 flex"
+        >
           <a
             className="size-full bg-green-800 rounded-xl hover:bg-green-200"
             href=""
@@ -190,29 +230,54 @@ export default function Projetos() {
           </a>
         </div>
       </div>
-      <div className="w-full h-60 flex flex-col mx-auto items-center bg-green-100 ">
-        <h1 className="text-center text-green-800 mt-10 sm:mt-10 mb-10 text-4xl timeup0 animate-fadein">
+      <div className="w-full h-80 flex flex-col mx-auto items-center bg-green-100 ">
+        <h1
+          data-aos="fade-in"
+          className="text-center text-green-800 mt-10 sm:mt-10 mb-10 text-4xl"
+        >
           patrocinadores
         </h1>
-        <div className="w-4/5 h-40 mx-auto flex flex-wrap p-2 rounded-md  bg-zinc-50 timeupbg animate-colorbg">
+        <div
+          data-aos="fade-in"
+          className="w-4/5 h-80 mx-auto flex flex-wrap p-4 rounded-md  bg-green-900"
+        >
           <img
-            className="w-2/5 sm:w-1/5 m-auto timeup1 animate-patrocinio "
+            data-aos="fade-in"
+            className="w-2/5 sm:w-1/6 m-auto  "
             src="imagens/patrocinio1.webp"
             alt=""
           />
           <img
-            className="w-2/5 sm:w-1/5 m-auto timeup2 animate-patrocinio "
-            src="imagens/patrocinio4.webp"
+            data-aos-delay="150"
+            data-aos="fade-in"
+            className="w-2/5 sm:w-1/6 m-auto  "
+            src="imagens/badboy.png"
             alt=""
           />
           <img
-            className="w-2/5 sm:w-1/5 m-auto timeup3 animate-patrocinio "
+            data-aos="fade-in"
+            className="w-2/5 sm:w-1/6 m-auto  "
             src="imagens/patrocinio2.webp"
             alt=""
           />
           <img
-            className="w-2/5 sm:w-1/5 m-auto timeup4 animate-patrocinio "
+            data-aos-delay="150"
+            data-aos="fade-in"
+            className="w-2/5 sm:w-1/6 m-auto  "
             src="imagens/patrocinio3.webp"
+            alt=""
+          />
+          <img
+            data-aos="fade-in"
+            className="w-2/5 sm:w-1/6 m-auto  "
+            src="imagens/maissaudavel.png"
+            alt=""
+          />
+          <img
+            data-aos-delay="150"
+            data-aos="fade-in"
+            className="w-2/5 sm:w-1/6 m-auto  "
+            src="imagens/arara.png"
             alt=""
           />
         </div>
@@ -222,31 +287,48 @@ export default function Projetos() {
       </div>
       <div className="w-full h-screen flexb flex-col justify-center bg-green-100">
         <div className="flex-col w-full h-8">
-          <h1 className="text-center text-green-800 mb-8 sm:mb-0 mt-36 sm:mt-20 sm:my-10 text-4xl timeup80 animate-fadein">
+          <h1
+            data-aos="fade-in"
+            className="text-center text-green-800 mb-8 sm:mb-0 mt-36 sm:mt-20 sm:my-10 text-4xl"
+          >
             camisa 12 e seleção digital
           </h1>
           <img
-            className="w-2/4 h-80 sm:h-auto mx-auto sm:w-1/6 timeupmandu animate-fadein"
+            data-aos="fade-in"
+            className="w-2/4 h-80 sm:h-auto mx-auto sm:w-1/6"
             src="imagens/camisa12.png"
             alt=""
           />
         </div>
-        <h1 className="w-3/4 flex mb-52 sm:mt-[26rem] text-center text-4xl mx-auto timeup0 animate-fadein">
+        <h1
+          data-aos-offset="200"
+          data-aos="fade-in"
+          className="w-3/4 flex mb-52 sm:mt-[26rem] text-center text-4xl mx-auto"
+        >
           ajude o Super Ralinha a chegar ainda mais longe!
         </h1>
       </div>
       <div className="w-full h-screen bg-green-100 flex justify-around flex-col">
         <img
-          className="w-2/4 sm:w-1/5 sm:mt-1 mx-auto -mt-10 timeupmandu animate-fadein"
+          data-aos="fade-in"
+          className="w-2/4 sm:w-1/5 sm:mt-1 mx-auto -mt-10"
           src="imagens/times.png"
           alt=""
         />
         <div className="w-full h-2/4">
-          <h5 className="w-3/4 text-center text-xl flex my-10 sm:my-0 sm:mt-16 mx-auto timeup0 animate-fadein text-zinc-700">
+          <h5
+            data-aos-offset="300"
+            data-aos="fade-in"
+            className="w-3/4 text-center text-xl flex my-10 sm:my-0 sm:mt-16 mx-auto text-zinc-700"
+          >
             Acesse, escolha seu time e cadastre suas redes sociais para ajudar a
             multiplicar os conteúdos e a torcida pelo Super Ralinha 2023.
           </h5>
-          <div className="w-2/4 h-16 sm:w-1/4 mx-auto flex flex-col timeout15 animate-fadein">
+          <div
+            data-aos-offset="250"
+            data-aos="fade-in"
+            className="w-2/4 h-16 sm:w-1/4 mx-auto flex flex-col"
+          >
             <a
               className="size-full bg-green-800 rounded-xl hover:bg-green-200"
               href=""

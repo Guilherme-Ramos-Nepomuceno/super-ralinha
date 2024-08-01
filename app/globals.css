@@ -24,65 +24,33 @@
   }
 
 }
-.progress{
-  animation-timeline: scroll(root);
+[data-aos=fade-leftm] {
+  transform: translateX(10px)
 }
-.timeup50{
-  animation-timeline: view(block);
-  animation-range: cover 50% cover 85%;
+[data-aos="out"] {
+  opacity: 1;
+  transition-property: transform, opacity;
 }
-.timeout30{
-  animation-timeline: view(block);
-  animation-range: cover 0% cover 35%;
+[data-aos="out"].aos-animate {
+  opacity: 0;
 }
-.timeout15{
-  animation-timeline: view(block);
-  animation-range: cover 0% cover 15%;
+[data-aos="rotate"] {
+  transform: rotate(0deg);
+  transition-property: transform, rotate;
 }
-.timeup90{
-  animation-timeline: view(block);
-  animation-range: cover 50% cover 90%;
+[data-aos="rotate"].aos-animate {
+  transform: rotate(360deg);
 }
-.timeup80{
-  animation-timeline: view(block);
-  animation-range: cover 70% cover 75%;
+[data-aos="bola"] {
+  transform: translateX(0px);
+  transition-property: transform, translateX;
 }
-.timeup60{
-  animation-timeline: view(block);
-  animation-range: cover 50% cover 60%;
+[data-aos="bola"].aos-animate {
+  transform: translateX(72px);
 }
-.timeup30{
-  animation-timeline: view(block);
-  animation-range: cover 30% cover 65%;
-}
-.timeupmandu{
-  animation-timeline: view(block);
-  animation-range: cover 30% cover 50%;
-}
-.timeup0{
-  animation-timeline: view(block);
-  animation-range: cover 0% cover 30%;
-}
-.timeup20{
-  animation-timeline: view(block);
-  animation-range: cover 0% cover 50%;
-}
-.timeup1{
-  animation-timeline: view(block);
-  animation-range: cover 3% cover 5%;
-}.timeup2{
-  animation-timeline: view(block);
-  animation-range: cover 6% cover 8%;
-}.timeup3{
-  animation-timeline: view(block);
-  animation-range: cover 9% cover 11%;
-}.timeup4{
-  animation-timeline: view(block);
-  animation-range: cover 12% cover 14%;
-}
-.timeupbg{
-  animation-timeline: view(block);
-  animation-range: cover 15% cover 17%;
+body[data-aos-duration='40000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='40000'] {
+  transition-duration: 40000ms;
 }
 .flex{
   display: flex;
@@ -107,5 +75,16 @@
 .dflex{
   display: flex;
 }
-
+.bgprincipal{
+  background-image: url(../public/imagens/backone.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bgprincipalc{
+  background-image: url(../public/imagens/backone.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: initial;
+}
   
