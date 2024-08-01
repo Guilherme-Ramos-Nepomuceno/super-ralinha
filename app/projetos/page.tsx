@@ -343,7 +343,7 @@ export default function Projetos() {
       <div className="w-full bg-green-900 h-auto relative z-20">
         <div className="w-3/5 mx-auto my-4 md:w-1/5 ">
           <img
-            className="w-10/12 mx-auto"
+            className="w-10/12 h-auto mx-auto"
             src="imagens/Logofooter.png"
             alt=""
           />
