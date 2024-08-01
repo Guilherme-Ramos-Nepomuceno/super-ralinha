@@ -344,7 +344,7 @@ export default function Projetos() {
         <div className="w-3/5 mx-auto my-4 md:w-1/5 ">
           <img
             className="w-10/12 h-40 mx-auto"
-            src="imagens/Logofooter.png"
+            src="imagens/logofooter.png"
             alt=""
           />
         </div>
