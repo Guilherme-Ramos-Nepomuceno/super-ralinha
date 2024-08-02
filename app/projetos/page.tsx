@@ -25,14 +25,20 @@ export default function Projetos() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-start ">
       {/* center logo */}
-      <div className="relative flexa flex-col w-full h-screen bg-green-100">
-        <div className="w-full md:h-4/5 h-2/6 -mt-10 flexend z-0 bgprincipal"></div>
+      <div className="relative flexa flex-col w-full h-screen bg-green-50">
+        <div className="w-full md:h-4/5 h-2/6 -mt-20 flexend z-0 bgprincipal"></div>
         <div
           data-aos-offset="700"
           data-aos="out"
           className="w-40  fixed flex items-center z-10"
         >
-          <img className="" src="imagens/1x/emblema.png" alt="" />
+          <Image
+            width={160}
+            height={160}
+            className=""
+            src="/imagens/1x/emblema.png"
+            alt=""
+          />
         </div>
         <div
           data-aos-duration="40000"
@@ -40,16 +46,28 @@ export default function Projetos() {
           data-aos="rotate"
           className="w-24 fixed flex z-10"
         >
-          <img className="mb-4" src="imagens/1x/bola.png" alt="bola" />
+          <Image
+            width={96}
+            height={96}
+            className="mb-4"
+            src="/imagens/1x/bola.png"
+            alt="bola"
+          />
         </div>
         <div
           data-aos-offset="700"
           data-aos="out"
           className="w-44 mt-5 fixed z-30 flex"
         >
-          <img className="" src="imagens/1x/super.png" alt="" />
+          <Image
+            width={176}
+            height={176}
+            className=""
+            src="/imagens/1x/super.png"
+            alt=""
+          />
         </div>
-        <div className="w-full h-auto bg-green-100 flex flex-col gap-y-3">
+        <div className="w-full h-auto bg-green-50 flex flex-col gap-y-3">
           <h1
             data-aos="fade-in"
             className="text-5xl h-auto font-bold text-green-800"
@@ -68,7 +86,13 @@ export default function Projetos() {
         </div>
       </div>
       <div className="w-40 fixed flexend bottom-4 mx-auto">
-        <img className="" src="imagens/campinho.png" alt="" />
+        <Image
+          width={160}
+          height={160}
+          className=""
+          src="/imagens/campinho.png"
+          alt=""
+        />
         <div
           data-aos-duration="40000"
           data-aos-offset="200"
@@ -94,10 +118,8 @@ export default function Projetos() {
           arraste para cima e acompanhe a bola em campo
         </h1>
       </div>
-      {/* container1 */}
-      {/* container2 */}
       <div
-        className=" bg-green-100 w-full h-screen flex flex-col text-center"
+        className=" bg-green-50 w-full h-screen flex flex-col text-center"
         id="ultimocamp"
       >
         <h1 data-aos="fade-in" className="text-5xl font-bold text-green-800">
@@ -118,45 +140,95 @@ export default function Projetos() {
               <Image
                 src="/imagensralinha/img1.webp"
                 alt=""
-                width={500}
-                height={500}
+                width={333}
+                height={333}
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img2.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img2.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img3.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img3.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img4.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img4.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img5.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img5.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img6.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img6.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img7.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img7.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img8.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img8.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img9.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img9.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img12.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img12.webp"
+                alt=""
+              />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
-              <img src="imagensralinha/img13.webp" alt="" />
+              <Image
+                width={333}
+                height={333}
+                src="/imagensralinha/img13.webp"
+                alt=""
+              />
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious className="left-0" />
           <CarouselNext className="right-0" />
         </Carousel>
-        <div className="w-full h-52 sm:h-[50vh] overflow-hidden bg-green-100 flex items-center justify-center">
+        <div className="w-full h-52 sm:h-[50vh] overflow-hidden bg-green-50 flex items-center justify-center">
           <iframe
             data-aos="fade-leftm"
             className="w-2/3 sm:mt-0 sm:w-2/4 h-48 md:mt-2 sm:h-[50vh]"
@@ -168,33 +240,35 @@ export default function Projetos() {
           ></iframe>
         </div>
       </div>
-      <div id="sobremandu" className="w-full h-2/4 bg-green-100 ">
+      <div id="sobremandu" className="w-full h-2/4 bg-green-50 ">
         <h1
           data-aos="fade-in"
-          className="text-5xl font-bold text-green-800 sm:mt-5 bg-green-100 text-center"
+          className="text-5xl font-bold text-green-800 sm:mt-5 bg-green-50 text-center"
         >
           sobre o manduvi
         </h1>
-        <img
+        <Image
+          width={500}
+          height={500}
           data-aos="fade-in"
           className="sm:h-4/5 mx-auto relative z-20"
-          src="imagens/manduvi.png"
+          src="/imagens/manduvi.png"
           alt=""
         />
       </div>
-      <div className="w-full h-screen flex flex-col bg-green-100">
+      <div className="w-full h-screen flex flex-col bg-green-50">
         <div
           data-aos-offset="800"
           data-aos="fade-in"
           className="w-2/4 h-[28%] relative z-30  sm:w-1/4 flex items-center mx-auto"
         >
-          <img src="imagens/premios.webp" alt="" />
+          <Image width={500} height={500} src="/imagens/premios.webp" alt="" />
         </div>
         <div
           data-aos="fade-in"
           className="w-3/4 relative z-20 h1/4 sm:w-1/4 flex mx-auto -mt-20 sm:-mt-0"
         >
-          <img src="imagens/gol.png" alt="" />
+          <Image width={500} height={500} src="/imagens/gol.png" alt="" />
         </div>
         <div>
           <h1
@@ -224,13 +298,13 @@ export default function Projetos() {
             className="size-full bg-green-800 rounded-xl hover:bg-green-200"
             href=""
           >
-            <span className="text-green-100 text-xl w-full flex h-16 my-auto text-center items-center hover:text-green-900">
+            <span className="text-green-50 text-xl w-full flex h-16 my-auto text-center items-center hover:text-green-900">
               vá para a inscrição
             </span>
           </a>
         </div>
       </div>
-      <div className="w-full h-80 flex flex-col mx-auto items-center bg-green-100 ">
+      <div className="w-full h-80 flex flex-col mx-auto items-center bg-green-50 ">
         <h1
           data-aos="fade-in"
           className="text-center text-green-800 mt-10 sm:mt-10 mb-10 text-4xl"
@@ -241,51 +315,60 @@ export default function Projetos() {
           data-aos="fade-in"
           className="w-4/5 h-80 mx-auto flex flex-wrap p-4 rounded-md  bg-green-900"
         >
-          <img
+          <Image
+            width={500}
+            height={500}
             data-aos="fade-in"
             className="w-2/5 sm:w-1/6 m-auto  "
-            src="imagens/patrocinio1.webp"
+            src="/imagens/patrocinio1.webp"
             alt=""
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             data-aos-delay="150"
             data-aos="fade-in"
             className="w-2/5 sm:w-1/6 m-auto  "
-            src="imagens/badboy.png"
+            src="/imagens/badboy.png"
             alt=""
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             data-aos="fade-in"
             className="w-2/5 sm:w-1/6 m-auto  "
-            src="imagens/patrocinio2.webp"
+            src="/imagens/patrocinio2.webp"
             alt=""
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             data-aos-delay="150"
             data-aos="fade-in"
             className="w-2/5 sm:w-1/6 m-auto  "
-            src="imagens/patrocinio3.webp"
+            src="/imagens/patrocinio3.webp"
             alt=""
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             data-aos="fade-in"
             className="w-2/5 sm:w-1/6 m-auto  "
-            src="imagens/maissaudavel.png"
+            src="/imagens/maissaudavel.png"
             alt=""
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             data-aos-delay="150"
             data-aos="fade-in"
             className="w-2/5 sm:w-1/6 m-auto  "
-            src="imagens/arara.png"
+            src="/imagens/arara.png"
             alt=""
           />
         </div>
-
-        {/* <img className="w-1/6" src="imagens/patrocinio5.webp" alt="" /> */}
-        {/* <img className="w-1/6" src="imagens/patrocinio6.webp" alt="" /> */}
       </div>
-      <div className="w-full h-screen flexb flex-col justify-center bg-green-100">
+      <div className="w-full h-screen flexb flex-col justify-center bg-green-50">
         <div className="flex-col w-full h-8">
           <h1
             data-aos="fade-in"
@@ -293,10 +376,12 @@ export default function Projetos() {
           >
             camisa 12 e seleção digital
           </h1>
-          <img
+          <Image
+            width={50}
+            height={50}
             data-aos="fade-in"
             className="w-2/4 h-80 sm:h-auto mx-auto sm:w-1/6"
-            src="imagens/camisa12.png"
+            src="/imagens/camisa12.png"
             alt=""
           />
         </div>
@@ -308,11 +393,13 @@ export default function Projetos() {
           ajude o Super Ralinha a chegar ainda mais longe!
         </h1>
       </div>
-      <div className="w-full h-screen bg-green-100 flex justify-around flex-col">
-        <img
+      <div className="w-full h-screen bg-green-50 flex justify-around flex-col">
+        <Image
+          width={500}
+          height={500}
           data-aos="fade-in"
           className="w-2/4 sm:w-1/5 sm:mt-1 mx-auto -mt-10"
-          src="imagens/times.png"
+          src="/imagens/times.png"
           alt=""
         />
         <div className="w-full h-2/4">
@@ -342,9 +429,11 @@ export default function Projetos() {
       </div>
       <div className="w-full bg-green-900 h-auto relative z-20">
         <div className="w-3/5 mx-auto my-4 md:w-1/5 ">
-          <img
+          <Image
+            width={500}
+            height={500}
             className="w-10/12 h-auto mx-auto"
-            src="imagens/logofooter.png"
+            src="/imagens/logofooter.png"
             alt=""
           />
         </div>
