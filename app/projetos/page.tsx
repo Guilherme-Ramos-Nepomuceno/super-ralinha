@@ -231,7 +231,7 @@ export default function Projetos() {
         <div className="w-full h-52 sm:h-[50vh] overflow-hidden bg-green-50 flex items-center justify-center">
           <iframe
             data-aos="fade-leftm"
-            className="w-2/3 sm:mt-0 sm:w-2/4 h-48 md:mt-2 sm:h-[50vh]"
+            className="w-2/3 sm:mt-0 sm:w-2/5 h-48 lg:mt-20 sm:h-[38vh]"
             src="https://www.youtube.com/embed/FDivBqurVp4?si=8OUePXlVNk48liTJ"
             title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
