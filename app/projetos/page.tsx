@@ -140,86 +140,86 @@ export default function Projetos() {
               <Image
                 src="/imagensralinha/img1.webp"
                 alt=""
-                width={333}
-                height={333}
+                width={750}
+                height={499}
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img2.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img3.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img4.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img5.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img6.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img7.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img8.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img9.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img12.webp"
                 alt=""
               />
             </CarouselItem>
             <CarouselItem className="pl-2 md:pl-4">
               <Image
-                width={333}
-                height={333}
+                width={750}
+                height={499}
                 src="/imagensralinha/img13.webp"
                 alt=""
               />
@@ -248,8 +248,8 @@ export default function Projetos() {
           sobre o manduvi
         </h1>
         <Image
-          width={500}
-          height={500}
+          width={1050}
+          height={551}
           data-aos="fade-in"
           className="sm:h-4/5 mx-auto relative z-20"
           src="/imagens/manduvi.png"
@@ -377,8 +377,8 @@ export default function Projetos() {
             camisa 12 e seleção digital
           </h1>
           <Image
-            width={50}
-            height={50}
+            width={128}
+            height={196}
             data-aos="fade-in"
             className="w-2/4 h-80 sm:h-auto mx-auto sm:w-1/6"
             src="/imagens/camisa12.png"
@@ -395,8 +395,8 @@ export default function Projetos() {
       </div>
       <div className="w-full h-screen bg-green-50 flex justify-around flex-col">
         <Image
-          width={500}
-          height={500}
+          width={318}
+          height={387}
           data-aos="fade-in"
           className="w-2/4 sm:w-1/5 sm:mt-1 mx-auto -mt-10"
           src="/imagens/times.png"
